@@ -279,6 +279,14 @@ html, body {
     height: 100vh;
     flex-wrap: wrap;
 }
+#ytVideo p {
+    font-size: 40px; 
+    margin: 0px 0px 0px 300px;
+}
+#schoolLocation p {
+    font-size: 40px; 
+    margin: 0px 300px 0px 0px; 
+}
 #schoolLocation {
     display: flex;
     justify-content: center;
@@ -577,4 +585,48 @@ table td {
     .navBar img {
         display:  none;
     }
+}
+@media only screen and (max-width: 430px) {
+    .navBar nav a{
+        font-size:  10px;
+    }
+    .skillsContainer div {
+        width: 10px;
+        height: 10px;
+    }
+    /* .skillsContainer div img {
+        display: none;
+    } */
+    #skillBorder {
+        position: relative;
+        left: 130px;
+        width: 150px;
+        height: 60px;
+        font-size: 10px;
+    }
+    #ytVideo p {
+        position: relative;
+        bottom: 120px;
+        right: 50px;
+        font-size: 25px;
+    }
+    #ytVideo iframe {
+        width: 300px;
+        height: 300px;
+    }
+    #schoolLocation iframe {
+        width: 300px;
+        height: 300px;
+    }
+    #schoolLocation p {
+        position: relative;
+        left: 100px;
+        top: 50px;
+        font-size: 25px;
+    }
+     #link img {
+        width: 200px;
+        height: 200px;
+    }
+
 }
