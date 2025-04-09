@@ -1,0 +1,580 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    scroll-behavior: smooth;
+}
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+  }
+
+.navBar {
+    position: fixed;
+    height: 12vh;
+    width: 100vw;
+    background-color: #050315;
+    z-index: 99;
+    top: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#logo {
+    width: 70px;
+    height: 70px;
+    margin: 30px;
+    position: relative;
+    left: 20px;
+    bottom: 5px;
+}
+.navBar nav a {
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+    margin: 10px;
+    position: relative;
+    width: 70%;
+    padding: 10px;
+    border-radius: 5px;
+    border: solid 1px transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+
+}
+.navBar nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 10px;
+    top: 20%;
+    width: 800px;
+    padding: 10px;
+    z-index: 9999;
+
+}
+.navBar nav a:hover {
+    border: solid 1px #0d0739;
+    background-color: #0d0739;
+    border-radius: 5px;
+}
+
+.landingPage {
+    background-color: #050315;
+    width: 100vw;
+    height: 100vh;
+}
+.landingPage {
+    width: 100vw;
+    height: 100vh;
+    font-size: 17px;
+    background-color: #050315;
+    position: relative;
+}
+.landingPage div {
+    position: relative;
+    top: 200px;
+    font-size: 30px;
+    left: 20px;
+    
+}
+.landingPage div strong {
+    font-size: 50px;
+    color: white;
+    margin: 5px;
+}
+.landingPage div button {
+    border: solid 1px aqua;
+    background-color:#050315;
+    color: aqua;
+    text-decoration: none;
+    width: 170px;
+    height: 50px;
+    margin: 15px 0px 0px 10px;
+    font-size: 17px;
+    border-radius: 10px; 
+    cursor: pointer;  
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+}
+.landingPage div button:hover{
+    background-color: aqua;
+    color: #050315;
+    transition: 0.5s;
+}
+.landingPage div button:hover svg {
+    color: #050315;
+    transition: 0.5s;
+}
+.landingPage div button svg {
+    margin: 5px;
+    color: aqua;
+    width: 20px;
+    height: 20px;
+}
+.landingPage i {
+    position: relative;
+    left: 5px;
+    margin: 10px 5px 10px 5px; 
+}
+.personalDetails {
+    position: absolute;
+    width: 100vw;
+    height: 95vh;
+    z-index: 99;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(-200%);
+    overflow: hidden;
+    backdrop-filter: blur(50px);
+    border: solid 1px aqua;
+}
+.personalDetails .personalInfo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 750px;
+    height: 800px;
+
+}
+.personalDetails .personalInfo img {
+    width: 200px;
+    height: 200px;
+    background-color: gray;
+    border-radius: 50%;
+}
+.personalInfo nav {
+    margin: 20px;
+    border: solid 1px aqua;
+    width: 80%;
+    height: 30px;
+    align-content: center;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: white;
+}
+.personalDetails .buttonUp {
+    position: absolute;
+    z-index: 999;
+    border: solid 1px aqua;
+    background-color: aqua;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    text-align: center;
+    align-content: center;
+    font-size: 40px;
+    bottom: 0px;
+    cursor: pointer;
+}
+.buttonUp:hover {
+    transform: translateY(-10%);
+    transition: 0.3 ease-in-out;
+}
+.skills {
+    background-color: white;
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+#skillBorder {
+    width: 200px;
+    height: 70px;
+    position: absolute;
+    top: -35px;
+    left: 45%;
+    z-index: 9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: black;
+    background-color: white;
+    border-radius: 10px;
+}
+.skillsContent {
+    width: 400px;
+    height: 500px;
+    min-width: 200px;
+    min-height: 300px;
+    max-width: 400px;
+    max-height: 500px;
+    background-color: white;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    z-index: 2;
+    box-sizing: border-box;
+}
+.skillsContainer {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    position: relative;
+}
+@keyframes appear {
+    from {
+        transform: translateX(500%);
+    }
+    to {
+        transform: translateX(0%);
+    }
+    
+}
+@keyframes disappear {
+    from {
+        transform: translateX(0%);
+    }
+    to {
+        transform: translateX(500%);
+    }
+    
+}
+.skillsContainer div img {
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    z-index: 1;
+}
+.skillsContainer div:hover img {
+    transform: scale(1.1);
+    transition: 0.5s;
+
+}
+
+#projects{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#ytVideo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    width: 100vw;
+    height: 100vh;
+    flex-wrap: wrap;
+}
+#schoolLocation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    width: 100vw;
+    height: 100vh;
+    flex-wrap: wrap;
+}
+iframe {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+}
+#symbols {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    position: relative;
+    
+}
+
+#link img{
+    height: 450px;
+    width: 600px;
+    max-height: 450px;
+    max-width: 600px;
+    min-height: 350px;
+    min-width: 500px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    position: relative;
+    right: 5px;
+    /* transform: translateX(-200%); */
+}
+#symbols section {
+    border: solid 1px transparent;
+    height: 450px;
+    width: 600px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    overflow: hidden;
+}
+#symbols section .emoj {
+    border: solid 1px black;
+    width: 300px;
+    height: 400px;
+    align-content: center;
+    margin: 10px;
+}
+/* #emojies {
+    transform: translateX(200%);
+  } */
+table {
+    margin: 50px;
+}
+table td {
+    border: solid 1px black;
+    width: 200px;
+    height: 60px;
+}
+/* section, article, aside {
+    margin-bottom: 20px;
+} */
+ /* .emoji1 {
+    transform: translateX(-130%);
+ }
+ .emoji2 {
+    transform: translateX(130%);
+ } */
+
+ #blogPage {
+    width: 100vw;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    
+ }
+ #blogPage div {
+    width: 400px;
+    height: 60vh;
+    border-radius: 20px;
+    margin: 20px;
+    box-shadow: 0 0 20px rgb(0, 0, 0.5);
+ }
+ #blogPage div img{
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+
+ }
+ #contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    height: 100px;
+    background-color: #050315;
+    color: white;
+}
+#contact footer {
+    margin: 20px;
+}
+@media only screen and (max-width: 900px) {
+    .navBar {
+        position: fixed;
+        height: 12vh;
+        width: 100vw;
+        background-color: #050315;
+        z-index: 99;
+        top: 0;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    
+    #logo {
+        width: 70px;
+        height: 70px;
+        margin: 30px;
+        position: relative;
+        left: 20px;
+        bottom: 5px;
+    }
+    .navBar nav a {
+        text-decoration: none;
+        font-weight: bold;
+        color: white;
+        margin: 10px;
+        position: relative;
+        width: 70%;
+        padding: 10px;
+        border-radius: 5px;
+        border: solid 1px transparent;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 9999;
+    
+    }
+    .navBar nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        right: 10px;
+        top: 20%;
+        width: 600px;
+        padding: 10px;
+        z-index: 9999;
+    
+    }
+    .navBar nav a:hover {
+        border: solid 1px #0d0739;
+        background-color: #0d0739;
+        border-radius: 5px;
+    }
+    .firstContainerContent {
+        font-size: 20;
+    }
+    .landingPage {
+        background-color: #050315;
+        width: 100vw;
+        height: 100vh;
+    }
+    .landingPage {
+        width: 100vw;
+        height: 100vh;
+        font-size: 17px;
+        background-color: #050315;
+        position: relative;
+    }
+    .landingPage div {
+        position: relative;
+        top: 200px;
+        font-size: 20px;
+        left: 20px;
+        
+    }
+    .landingPage div strong {
+        font-size: 50px;
+        color: white;
+        margin: 5px;
+    }
+    .landingPage div button {
+        border: solid 1px aqua;
+        background-color:#050315;
+        color: aqua;
+        text-decoration: none;
+        width: 170px;
+        height: 50px;
+        margin: 15px 0px 0px 10px;
+        font-size: 17px;
+        border-radius: 10px; 
+        cursor: pointer;  
+        display: flex; 
+        justify-content: center;
+        align-items: center;
+    }
+    .landingPage div button:hover{
+        background-color: aqua;
+        color: #050315;
+        transition: 0.5s;
+    }
+    .landingPage div button:hover svg {
+        color: #050315;
+        transition: 0.5s;
+    }
+    .landingPage div button svg {
+        margin: 5px;
+        color: aqua;
+        width: 20px;
+        height: 20px;
+    }
+    .landingPage i {
+        position: relative;
+        left: 5px;
+        margin: 10px 5px 10px 5px; 
+    }
+    #ytVideo p {
+        margin: 0px;
+        padding: 0px;
+        position: relative;
+        bottom: 90px;
+    }
+    iframe {
+        width: 400px;
+        height: 400px;
+        padding: 0px;
+        margin: 0px;
+    }
+    
+}
+@media only screen and (max-width: 1200px) {
+    #blogPage {
+        width: 100vw;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        margin-top: 100px;
+     }
+     .skills {
+        background-color: white;
+        width: 100vw;
+        height: 150vh;
+        position: relative;
+    }
+    
+}
+@media only screen and (max-width: 700px) {
+    .navBar nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        right: 10px;
+        top: 20%;
+        width: 400px;
+        padding: 10px;
+        z-index: 9999;
+    }
+    .navBar nav a {
+        text-decoration: none;
+        font-weight: bold;
+        color: white;
+        margin: 10px;
+        position: relative;
+        width: 70%;
+        padding: 10px;
+        border-radius: 5px;
+        border: solid 1px transparent;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 9999;
+        font-size: 13px;
+    }
+    
+}
+@media only screen and (max-width: 560px) {
+    .navBar img {
+        display:  none;
+    }
+}
